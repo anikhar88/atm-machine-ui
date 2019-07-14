@@ -8,6 +8,7 @@ import { AvailableNotesComponent } from './available-notes/available-notes.compo
 import { EnterPinComponent } from './enter-pin/enter-pin.component';
 import { SelectServicesComponent } from './select-services/select-services.component';
 import { StatusComponent } from './status/status.component';
+import { LocatorDetailService } from './services/locator-detail.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { StatusComponent } from './status/status.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [LocatorDetailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
