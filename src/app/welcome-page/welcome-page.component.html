@@ -1,5 +1,9 @@
-<p>
-  welcome-page works!
-  <input type="text" name="cardNumber" />
-  <input type="submit" name="Enter" />
-</p>
+<section class="wrapper">
+  <div class="home">
+      <img src="/assets/images/logo-white.svg" alt="logo">
+      <h3>Please insert your card</h3>
+      <input class="form-control" [ngModel]="plainCreditCard | cardFormat" 
+      (ngModelChange)="plainCreditCard.value=$event" name="inputField" type="text">
+      <a class="btn btn-red mt-4" (click)="onSubmit()">SUBMIT</a>
+  </div>
+</section>

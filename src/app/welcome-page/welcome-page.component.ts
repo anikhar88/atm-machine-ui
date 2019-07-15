@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-welcome-page',
@@ -6,12 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome-page.component.css']
 })
 export class WelcomePageComponent implements OnInit {
-  
+
+  plainCreditCard:string = '5555555555551234';
   cardNumber: number;
+  constructor(private router: Router) { }
 
-  constructor() { }
 
-  ngOnInit() {
-  }
+  onSubmit(){
+      this.router.navigate(['/select-mode']);
+    }
+
+    ngOnInit() {
+    }
 
 }

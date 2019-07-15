@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,9 @@ import { EnterPinComponent } from './enter-pin/enter-pin.component';
 import { SelectServicesComponent } from './select-services/select-services.component';
 import { StatusComponent } from './status/status.component';
 import { LocatorDetailService } from './services/locator-detail.service';
+import { ProcessingPageComponent } from './processing-page/processing-page.component';
+import { SelectModeComponent } from './select-mode/select-mode.component';
+import { CardFormatPipe } from './shared/card-format.pipe';
 
 @NgModule({
   declarations: [
@@ -17,11 +21,15 @@ import { LocatorDetailService } from './services/locator-detail.service';
     AvailableNotesComponent,
     EnterPinComponent,
     SelectServicesComponent,
-    StatusComponent
+    StatusComponent,
+    ProcessingPageComponent,
+    SelectModeComponent,
+    CardFormatPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [LocatorDetailService],
   bootstrap: [AppComponent]
